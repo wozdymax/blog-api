@@ -13,7 +13,8 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Actions;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Illuminate\Support\Facades\Hash;
@@ -87,8 +88,8 @@ class UserResource extends Resource
                     ]),
             ])
             ->actions([
-                Actions\EditAction::make(),
-                Actions\DeleteAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
             ]);
     }
 
